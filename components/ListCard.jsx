@@ -1,32 +1,28 @@
 import { Rating as ReactRating, Star } from "@smastrom/react-rating";
 import Image from "next/image";
 
-const Card = ({ product }) => {
-  // Declare it outside your component so it doesn't get re-created
+const ListCard = ({ product }) => {
+  const { title, price, description, category, image, rating } = product;
   const myStyles = {
     itemShapes: Star,
     activeFillColor: "#F6AA24",
     inactiveFillColor: "#fbf1a9",
   };
-
-  const { title, price, description, category, image, rating } = product;
-
   return (
-    <div className="w-full col-span-6 md:col-span-3 bg-[#F7F8F8] border border-gray-200 shadow rounded-lg flex flex-col">
-      <a href="#">
+    <div className="card card-side bg-[#F7F8F8]  py-4 col-span-12 max-h-[170px] rounded-lg ">
+      <figure>
         <Image
-          className="rounded-lg h-[180px] width-[236px] object-contain"
           src={image}
-          alt="product image"
-          width={236}
-          height={180}
+          alt="Movie "
+          width={358}
+          height={161}
+          className="w-[358px] h-[161px] object-contain"
         />
-      </a>
-      <div className="px-5 pb-5 py-5 flex flex-col flex-grow">
+      </figure>
+      <div className="card-body px-1 py-1  pl-5 gap-1">
         <h5 className="font-normal leading-6 text-base tracking-tight text-black">
           {title}
         </h5>
-
         <div className="flex items-center pt-1 mt-1">
           <ReactRating
             className="text-[#F6AA24]"
@@ -36,18 +32,21 @@ const Card = ({ product }) => {
             value={rating.rate}
           />
         </div>
-        <div className="mb-1">
+        <div className="">
           <p className="text-[#ADB0B7]">({rating.count} Review)</p>
         </div>
-        <div className="flex items-center justify-between mt-auto">
+        <div className="flex items-center justify-between mt-auto pr-4 pb-4">
           <span className="text-xl font-bold text-[#F2415A]">${price}</span>
-          <button className="text-white bg-[#212529] focus:outline-none rounded-md text-sm px-2.5 py-2.5 text-center">
+          <a
+            href="#"
+            className="text-white bg-[#212529] focus:outline-none rounded-md text-sm px-2.5 py-2.5 text-center"
+          >
             Add to cart
-          </button>
+          </a>
         </div>
       </div>
     </div>
   );
 };
 
-export default Card;
+export default ListCard;
