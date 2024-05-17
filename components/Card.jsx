@@ -1,5 +1,6 @@
 import { Rating as ReactRating, Star } from "@smastrom/react-rating";
 import Image from "next/image";
+import AddToCartButton from "./AddToCartButton";
 
 const Card = ({ product }) => {
   // Declare it outside your component so it doesn't get re-created
@@ -12,8 +13,8 @@ const Card = ({ product }) => {
   const { title, price, description, category, image, rating } = product;
 
   return (
-    <div className="w-full col-span-6 md:col-span-3 bg-[#F7F8F8] border border-gray-200 shadow rounded-lg flex flex-col">
-      <a href="#">
+    <div className="w-full col-span-6 lg:col-span-3 bg-[#F7F8F8] border border-gray-200 shadow rounded-lg flex flex-col">
+      <div className="w-[236px] h-[180px] ">
         <Image
           className="rounded-lg h-[180px] width-[236px] object-contain"
           src={image}
@@ -21,7 +22,7 @@ const Card = ({ product }) => {
           width={236}
           height={180}
         />
-      </a>
+      </div>
       <div className="px-5 pb-5 py-5 flex flex-col flex-grow">
         <h5 className="font-normal leading-6 text-base tracking-tight text-black">
           {title}
@@ -40,10 +41,10 @@ const Card = ({ product }) => {
           <p className="text-[#ADB0B7]">({rating.count} Review)</p>
         </div>
         <div className="flex items-center justify-between mt-auto">
-          <span className="text-xl font-bold text-[#F2415A]">${price}</span>
-          <button className="text-white bg-[#212529] focus:outline-none rounded-md text-sm px-2.5 py-2.5 text-center">
-            Add to cart
-          </button>
+          <span className="md:text-xl text-base font-bold text-[#F2415A]">
+            ${price}
+          </span>
+          <AddToCartButton product={product} />
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ const CardBoard = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-12 gap-x-2 gap-y-4">
+    <div className="grid grid-cols-12 gap-x-2 gap-y-4 overflow-hidden">
       {/* Correct rendering of Card components */}
       {isGrid
         ? products.map((product) => (

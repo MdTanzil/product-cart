@@ -1,16 +1,9 @@
-"use client";
+import Link from "next/link";
 
-import { useEffect, useState } from "react";
-
-const NavButton = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+const NavButton = ({ to, children }) => {
   return (
     <li>
-      <a>Product</a>
+      <Link href={to}>{children}</Link>
     </li>
   );
 };
