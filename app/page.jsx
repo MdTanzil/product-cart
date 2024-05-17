@@ -2,6 +2,7 @@
 import CardBoard from "@/components/CardBoard";
 import CartPage from "@/components/CartPage";
 import SearchFelid from "@/components/SearchFelid";
+import Footer from "@/components/footer/Footer";
 import GridIcon from "@/components/iconsButton/GridIcon";
 import Navbar from "@/components/navbar/Navbar";
 import GridAndListProvider from "@/providers/GridAndListProvider";
@@ -60,6 +61,7 @@ export default async function Home() {
           </div>
         </div>
       </main>
+      <Footer />
     </GridAndListProvider>
   );
 }
