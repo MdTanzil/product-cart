@@ -7,7 +7,7 @@ const cartpage = () => {
       <div className="mt-4 space-x-2">
         <input type="checkbox" id="cha" className="" />
         <label htmlFor="cha" className="font-light">
-          I've read and agree to the  terms and conditions,  refund policy
+          I&aposve read and agree to the  terms and conditions,  refund policy
           & privacy policy
         </label>
       </div>

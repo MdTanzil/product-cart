@@ -8,7 +8,6 @@ import ListCard from "./ListCard";
 const CardBoard = () => {
   const [products, setProducts] = useState([]);
   const { isGrid, setIsGrid } = useContext(GridContext);
-  console.log(isGrid);
 
   useEffect(() => {
     const fetchProducts = async () => {
