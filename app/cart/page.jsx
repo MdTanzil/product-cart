@@ -3,6 +3,9 @@ import CartPage from "@/components/CartPage";
 const cartpage = () => {
   return (
     <div className="max-w-2xl mx-auto">
+      <button className="text-white bg-[#212529] focus:outline-none rounded-md text-sm w-full px-2.5 py-2.5 text-center font-semibold">
+        Selected Products
+      </button>
       <CartPage />
       <div className="mt-4 space-x-2">
         <input type="checkbox" id="cha" className="" />
