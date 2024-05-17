@@ -2,7 +2,7 @@
 
 ### Live Link
 
-[Product Cart]([https://dua-frontend-green.vercel.app/](https://product-cart-mu.vercel.app/))
+[Product Cart]([https://product-cart-mu.vercel.app/))
 
 ## Project features
 
