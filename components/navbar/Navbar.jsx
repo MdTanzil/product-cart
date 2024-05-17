@@ -40,9 +40,9 @@ const Navbar = () => {
               <NavButton to={"/cart"}>Cart</NavButton>
             </ul>
           </div>
-          <a className="btn w-[104px] hidden md:visible h-[45px] font-bold bg-[#525CEB] rounded-sm text-white outline-none border-none hover:bg-[#525CEB]">
+          <button className="btn w-[104px] hidden lg:block  h-[45px] font-bold bg-[#525CEB] rounded-sm text-white outline-none border-none hover:bg-[#525CEB]">
             LOGIN
-          </a>
+          </button>
         </div>
       </div>
     </nav>

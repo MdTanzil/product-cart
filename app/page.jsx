@@ -39,7 +39,7 @@ export default async function Home() {
             {/* Cart Area  */}
 
             {/* add to cart bottom area  */}
-            <div className="border-1 border-black">
+            <div className="border p-2 border-[#212529]">
               <button className="text-white bg-[#212529] focus:outline-none rounded-md text-sm w-full px-2.5 py-2.5 text-center font-semibold">
                 Selected Products
               </button>
@@ -52,12 +52,12 @@ export default async function Home() {
                   policy & privacy policy
                 </label>
               </div>
+              <p className="text-right mt-2 ">
+                <button className="text-white text-right bg-[#212529] focus:outline-none rounded-md text-sm px-2.5 py-2.5 ">
+                  CHECKOUT
+                </button>
+              </p>
             </div>
-            <p className="text-right mt-2">
-              <button className="text-white text-right bg-[#212529] focus:outline-none rounded-md text-sm px-2.5 py-2.5 ">
-                CHECKOUT
-              </button>
-            </p>
           </div>
         </div>
       </main>
